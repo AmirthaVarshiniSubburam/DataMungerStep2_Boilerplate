@@ -128,9 +128,11 @@ public class DataMungerTestTask1 {
 				orderByFields);
 
 		queryString = "select city,winner,team1 from ipl.csv order by winner";
-		orderByFields.clear();
+		orderByFields.clear();	
+		
+		
 		orderByFields = queryParameter.getOrderByFields();
-
+		
 		assertNotEquals(
 				"testGetOrderByClauseFailure() : Hint: Please note that we will need to extract the field(s) after 'order by' clause in the query, if at all the order by clause exists",
 				"team1", orderByFields);
